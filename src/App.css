@@ -5,3 +5,18 @@
   flex-direction: column;
   align-items: center;
 }
+
+header {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+main {
+  height: 80%;
+  width: 100%;
+  border: 1px solid red;
+}
