@@ -2,10 +2,11 @@
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Space Mono', monospace;
 }
 
 html, body {
   padding: 0;
   margin: 0;
+  background-color: hsl(185, 41%, 84%);
 }
