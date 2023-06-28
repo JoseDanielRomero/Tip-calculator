@@ -18,5 +18,32 @@ header {
 main {
   height: 80%;
   width: 100%;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 4%;
+}
+
+.main-content-container {
+  height: 70%;
+  width: 50%;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 2%;
+  gap: 3%;
+}
+
+.calculator-box, .result-box {
+  height: 100%;
+  width: 50%;
+}
+
+.result-box {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
 }
