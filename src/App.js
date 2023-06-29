@@ -35,7 +35,7 @@ function App() {
   const [dataBase, setDataBase] = useState(dataBaseButtons)
   const [bill, setBill] = useState('')
   const [people, setPeople] = useState('')
-  const [tip, setTip] = useState(0)
+  const [tip, setTip] = useState('')
   const [customTipShown, setCustomTipShown] = useState('')
 
   return (

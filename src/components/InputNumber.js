@@ -3,7 +3,17 @@ import '../stylesheets/InputNumber.css'
 function InputNumber({ titleInputBox, type, setter, iconInput }) {
 
   const handleChangeInputNum = (event) => {
-    setter(event.target.value)
+    const limit = 6
+    const valueMaxLength = event.target.value.slice(0, limit)
+
+    const valueNumber = Number(valueMaxLength)
+
+    if (event.target.value.length === 0) {
+      setter('')
+    } else {
+      setter(valueNumber)
+    }
+
   }
 
   return (
