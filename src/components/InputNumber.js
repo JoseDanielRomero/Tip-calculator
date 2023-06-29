@@ -1,6 +1,6 @@
 import '../stylesheets/InputNumber.css'
 
-function InputNumber({ titleInputBox, type, setter, iconInput }) {
+function InputNumber({ titleInputBox, type, setter, iconInput, htmlType }) {
 
   const handleChangeInputNum = (event) => {
     const limit = 6
@@ -23,11 +23,12 @@ function InputNumber({ titleInputBox, type, setter, iconInput }) {
       <div className='divider-input'>
         <img className='icon-input' src={iconInput}></img>
         <input
-          type='number'
+          type={htmlType}
           placeholder='0'
           className='input-box'
           value={type}
           onChange={handleChangeInputNum}
+          maxLength='1'
         />
       </div>
     </div>
