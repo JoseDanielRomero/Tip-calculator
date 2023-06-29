@@ -1,0 +1,17 @@
+.tip-container {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.tip-list-container {
+    height: 70%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(2, 48%);
+}
+

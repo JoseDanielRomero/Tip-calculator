@@ -5,9 +5,10 @@ import { useState } from 'react';
 
 function App() {
 
-  const [type, setType] = useState('')
   const [bill, setBill] = useState('')
   const [people, setPeople] = useState('')
+  const [tip, setTip] = useState(0)
+  const [customTipShown, setCustomTipShown] = useState('')
 
   return (
     <div className="App">
@@ -21,8 +22,10 @@ function App() {
             setBill={setBill}
             people={people}
             setPeople={setPeople}
-            type={type}
-            setType={setType}
+            tip={tip}
+            setTip={setTip}
+            customTipShown={customTipShown}
+            setCustomTipShown={setCustomTipShown}
           />
           <section className='result-box'>
 

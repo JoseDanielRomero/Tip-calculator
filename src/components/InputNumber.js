@@ -1,17 +1,15 @@
 import '../stylesheets/InputNumber.css'
 
-function InputNumber({ titleInputBox, type, setType, iconInput }) {
+function InputNumber({ titleInputBox, type, setter, iconInput }) {
 
   const handleChangeInputNum = (event) => {
-    setType(event.target.value)
+    setter(event.target.value)
   }
-
-  console.log(type)
 
   return (
     <div className='input-container'>
 
-      <h4 className='title-input'>{titleInputBox}</h4>
+      <h4 className='title-calculator'>{titleInputBox}</h4>
       <div className='divider-input'>
         <img className='icon-input' src={iconInput}></img>
         <input
