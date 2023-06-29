@@ -1,10 +1,12 @@
 import '../stylesheets/CustomTip.css'
 
-function CustomTip({ setTip, customTipShown, setCustomTipShown }) {
+function CustomTip({ setTip, customTipShown, setCustomTipShown, setDataBase, dataBaseButtons }) {
 
   const handleChangeCustomTip = (event) => {
     setTip(event.target.value)
     setCustomTipShown(event.target.value)
+
+    setDataBase(dataBaseButtons)
   }
 
   return (

@@ -12,9 +12,14 @@
     border: none;
     text-align: center;
     letter-spacing: .1rem;
+    transition: all .1s;
 }
 
 .tip-button-box.on {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
+}
+
+.tip-button-box:hover {
+    cursor: pointer;
 }

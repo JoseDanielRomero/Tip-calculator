@@ -32,6 +32,7 @@ function App() {
     "active": false
   }]
 
+  const [dataBase, setDataBase] = useState(dataBaseButtons)
   const [bill, setBill] = useState('')
   const [people, setPeople] = useState('')
   const [tip, setTip] = useState(0)
@@ -53,6 +54,8 @@ function App() {
             setTip={setTip}
             customTipShown={customTipShown}
             setCustomTipShown={setCustomTipShown}
+            dataBase={dataBase}
+            setDataBase={setDataBase}
             dataBaseButtons={dataBaseButtons}
           />
           <section className='result-box'>
