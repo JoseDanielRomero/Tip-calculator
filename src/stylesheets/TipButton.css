@@ -23,3 +23,8 @@
 .tip-button-box:hover {
     cursor: pointer;
 }
+
+.tip-button-box:active {
+    background-color: hsl(172, 78%, 62%);
+    color: hsl(183, 100%, 15%);
+}

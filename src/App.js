@@ -3,6 +3,7 @@ import logo from '../src/images/logo.svg'
 import Calculator from './components/Calculator';
 import { useState } from 'react';
 import {v4 as uuidv4} from 'uuid'
+import Results from './components/Results';
 
 function App() {
 
@@ -38,6 +39,14 @@ function App() {
   const [tip, setTip] = useState('')
   const [customTipShown, setCustomTipShown] = useState('')
 
+  if (typeof bill === 'number') {
+    console.log(bill.toFixed(2))
+  }
+
+  if (typeof people === 'number') {
+    console.log(people.toFixed())
+  }
+
   return (
     <div className="App">
       <header>
@@ -58,9 +67,7 @@ function App() {
             setDataBase={setDataBase}
             dataBaseButtons={dataBaseButtons}
           />
-          <section className='result-box'>
-
-          </section>
+          <Results />
         </article>
       </main>
     </div>

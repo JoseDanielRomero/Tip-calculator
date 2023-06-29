@@ -28,8 +28,7 @@ function Calculator({ setBill, bill, people, setPeople, tip, setTip, customTipSh
         setter={setPeople}
         iconInput={peopleIcon}
         htmlType='tel'
-      />
-      
+      /> 
     </section>
   );
 }

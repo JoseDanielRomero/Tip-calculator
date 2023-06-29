@@ -47,8 +47,7 @@ function SelectTip({ setTip, customTipShown, setCustomTipShown, dataBase, setDat
                   resolveClass={handleButtonClass}
                 />
               </>
-            )
-          })
+            )})
         }
         <CustomTip 
           setTip={setTip}
