@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: hsl(180, 19%, 93%);
-    padding-left: 5%;
+    padding: 0 5%;
     border-radius: 7px;
 }
 

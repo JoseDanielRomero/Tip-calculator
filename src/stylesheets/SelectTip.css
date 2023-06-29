@@ -1,5 +1,5 @@
 .tip-container {
-    height: 45%;
+    height: 40%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,10 +8,12 @@
 }
 
 .tip-list-container {
-    height: 70%;
+    height: 80%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: repeat(2, 48%);
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 31%);
+    grid-template-rows: repeat(2, 45%);
+    row-gap: 10%;
 }
 

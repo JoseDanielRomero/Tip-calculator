@@ -1,10 +1,11 @@
 import '../stylesheets/TipButton.css'
 
-function TipButton({ tipPercentage }) {
+function TipButton({ tipPercentage, resolveClick, resolveClass }) {
+
   return (
     <button
-      className='tip-button-box'
-      
+      className={resolveClass()}
+      onClick={resolveClick}
     >{tipPercentage}%</button>
   )
 }

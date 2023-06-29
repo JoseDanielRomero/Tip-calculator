@@ -4,7 +4,7 @@ import dollarIcon from '../images/icon-dollar.svg';
 import peopleIcon from '../images/icon-person.svg'
 import SelectTip from './SelectTip';
 
-function Calculator({ setBill, bill, people, setPeople, tip, setTip, customTipShown, setCustomTipShown }) {
+function Calculator({ setBill, bill, people, setPeople, tip, setTip, customTipShown, setCustomTipShown, dataBaseButtons}) {
   return (
     <section className='calculator-box'>
       <InputNumber 
@@ -18,6 +18,7 @@ function Calculator({ setBill, bill, people, setPeople, tip, setTip, customTipSh
         setTip={setTip}
         customTipShown={customTipShown}
         setCustomTipShown={setCustomTipShown}
+        dataBaseButtons={dataBaseButtons}
       />
       <InputNumber 
         titleInputBox='Number of People'
