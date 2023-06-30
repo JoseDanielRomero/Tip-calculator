@@ -73,6 +73,8 @@ function App() {
             bill={bill}
             tip={tip}
             people={people}
+            resultTotal={resultTotal}
+            setResultTotal={setResultTotal}
           />
         </article>
       </main>

@@ -1,31 +1,48 @@
 import '../stylesheets/Results.css'
 
-function Results({ resultTip, setResultTip, bill, tip, people }) {
+function Results({ resultTip, setResultTip, resultTotal, setResultTotal, bill, tip, people }) {
 
   const copyTip = tip;
   const copyBill = bill;
   const copyPeople = people;
 
-  const handleShowResulTip = () => {
+  const handleShowResultTip = () => {
     if (typeof copyTip == 'number' && typeof copyBill == 'number' && typeof copyPeople == 'number') {
       const fixBill = copyBill.toFixed(2)
-
       const fixTip = copyTip.toFixed()
-
+      
       const formula = (fixBill * fixTip) / 100
+      const formartFormula = formula.toFixed(2)
 
-      const formartResult = formula.toFixed(2)
-
-      setResultTip('$'+formartResult)
+      const division = formartFormula / copyPeople
+      const formatResult = division.toFixed(2)
+      setResultTip('$'+formatResult)
     } else {
       setResultTip('$0.00')
     }
-
     return resultTip
-
   }
 
-  
+  const handleShowResultTotal = () => {
+    if (typeof copyTip == 'number' && typeof copyBill == 'number' && typeof copyPeople == 'number') {
+
+      const fixBill = copyBill.toFixed(2)
+      const fixTip = copyTip.toFixed()
+      
+      const formula = (fixBill * fixTip) / 100
+      const formartFormula = formula.toFixed(2)
+
+      const sum = Number(fixBill) + Number(formartFormula)
+      const division = sum / 5
+
+      const formatResult = division.toFixed(2)
+      setResultTotal('$'+formatResult)
+    } else {
+      setResultTotal('$0.00')
+    }
+    return resultTotal
+  }
+
   const handleDisableButton = () => {
     if (typeof copyTip == 'number' || typeof copyBill == 'number' || typeof copyPeople == 'number') {
       return 'reset-button'
@@ -43,7 +60,7 @@ function Results({ resultTip, setResultTip, bill, tip, people }) {
             <h5 className='subtitle-result'>/ person</h5>
           </div>
           <div className='number-box'>
-            <p className='result-number'>{handleShowResulTip()}</p>
+            <p className='result-number'>{handleShowResultTip()}</p>
           </div>
         </div>
         <div className='result-container'>
@@ -52,7 +69,7 @@ function Results({ resultTip, setResultTip, bill, tip, people }) {
             <h5 className='subtitle-result'>/ person</h5>
           </div>
           <div className='number-box'>
-            <p className='result-number'>$00.00</p>
+            <p className='result-number'>{handleShowResultTotal()}</p>
           </div>
         </div>
       </div>
