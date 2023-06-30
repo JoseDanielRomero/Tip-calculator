@@ -9,7 +9,7 @@ function Results({ resultTip, setResultTip, bill, tip, people }) {
   const handleShowResulTip = () => {
     if (typeof copyTip == 'number' && typeof copyBill == 'number' && typeof copyPeople == 'number') {
       const fixBill = copyBill.toFixed(2)
- 
+
       const fixTip = copyTip.toFixed()
 
       const formula = (fixBill * fixTip) / 100
@@ -26,7 +26,13 @@ function Results({ resultTip, setResultTip, bill, tip, people }) {
   }
 
   
-    
+  const handleDisableButton = () => {
+    if (typeof copyTip == 'number' || typeof copyBill == 'number' || typeof copyPeople == 'number') {
+      return 'reset-button'
+    } else {
+      return 'reset-button off'
+    }
+  }
   
   return (
     <section className='result-box'>
@@ -51,7 +57,7 @@ function Results({ resultTip, setResultTip, bill, tip, people }) {
         </div>
       </div>
       <div className='reset-result-box'>
-        <button className='reset-button'>RESET</button>
+        <button className={handleDisableButton()}>RESET</button>
       </div>
     </section>
   )

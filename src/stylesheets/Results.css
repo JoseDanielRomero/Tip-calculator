@@ -87,10 +87,23 @@
     transition: all .1s;
 }
 
+.reset-button.off {
+    background-color: hsl(183, 43%, 32%);
+    color: hsl(183, 98%, 17%);
+}
+
 .reset-button:hover {
     cursor: pointer;
 }
 
+.reset-button.off:hover {
+    cursor: auto;
+}
+
 .reset-button:active {
     background-color: hsl(172, 78%, 62%);
+}
+
+.reset-button.off:active {
+    background-color: hsl(183, 43%, 32%)
 }
