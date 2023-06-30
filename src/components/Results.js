@@ -1,13 +1,13 @@
 import '../stylesheets/Results.css'
 
-function Results({ resultTip, setResultTip, resultTotal, setResultTotal, bill, tip, people }) {
+function Results({ dataBaseButtons, resultTip, setResultTip, resultTotal, setResultTotal, bill, tip, people, setBill, setTip, setPeople, setDataBase, setCustomTipShown }) {
 
   const copyTip = tip;
   const copyBill = bill;
   const copyPeople = people;
 
   const handleShowResultTip = () => {
-    if (typeof copyTip == 'number' && typeof copyBill == 'number' && typeof copyPeople == 'number') {
+    if (typeof copyTip == 'number' && typeof copyBill == 'number' && typeof copyPeople == 'number' && copyPeople != 0) {
       const fixBill = copyBill.toFixed(2)
       const fixTip = copyTip.toFixed()
       
@@ -24,7 +24,7 @@ function Results({ resultTip, setResultTip, resultTotal, setResultTotal, bill, t
   }
 
   const handleShowResultTotal = () => {
-    if (typeof copyTip == 'number' && typeof copyBill == 'number' && typeof copyPeople == 'number') {
+    if (typeof copyTip == 'number' && typeof copyBill == 'number' && typeof copyPeople == 'number' && copyPeople != 0) {
 
       const fixBill = copyBill.toFixed(2)
       const fixTip = copyTip.toFixed()
@@ -33,7 +33,7 @@ function Results({ resultTip, setResultTip, resultTotal, setResultTotal, bill, t
       const formartFormula = formula.toFixed(2)
 
       const sum = Number(fixBill) + Number(formartFormula)
-      const division = sum / 5
+      const division = sum / copyPeople
 
       const formatResult = division.toFixed(2)
       setResultTotal('$'+formatResult)
@@ -43,7 +43,7 @@ function Results({ resultTip, setResultTip, resultTotal, setResultTotal, bill, t
     return resultTotal
   }
 
-  const handleDisableButton = () => {
+  const handleDisableClass = () => {
     if (typeof copyTip == 'number' || typeof copyBill == 'number' || typeof copyPeople == 'number') {
       return 'reset-button'
     } else {
@@ -51,6 +51,20 @@ function Results({ resultTip, setResultTip, resultTotal, setResultTotal, bill, t
     }
   }
   
+  const handleDisableAction = () => {
+
+    if (typeof copyTip == 'number' || typeof copyBill == 'number' || typeof copyPeople == 'number') {
+      setBill('')
+      setTip('')
+      setPeople('')
+      setDataBase(dataBaseButtons)
+      setCustomTipShown('')
+      setResultTip('$0.00')
+      setResultTotal('$0.00')
+    } 
+
+  }
+
   return (
     <section className='result-box'>
       <div className='result-box-list'>
@@ -74,7 +88,7 @@ function Results({ resultTip, setResultTip, resultTotal, setResultTotal, bill, t
         </div>
       </div>
       <div className='reset-result-box'>
-        <button className={handleDisableButton()}>RESET</button>
+        <button className={handleDisableClass()} onClick={handleDisableAction}>RESET</button>
       </div>
     </section>
   )

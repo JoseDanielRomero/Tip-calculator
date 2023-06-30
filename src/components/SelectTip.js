@@ -41,8 +41,6 @@ function SelectTip({ setTip, customTipShown, setCustomTipShown, dataBase, setDat
               <>
                 <TipButton 
                   tipPercentage={button.tipPercentage}
-                  setTip={setTip}
-                  setCustomTipShown={setCustomTipShown}
                   resolveClick={handleClickTipButton}
                   resolveClass={handleButtonClass}
                 />
@@ -53,7 +51,6 @@ function SelectTip({ setTip, customTipShown, setCustomTipShown, dataBase, setDat
           setTip={setTip}
           customTipShown={customTipShown}
           setCustomTipShown={setCustomTipShown}
-          dataBase={dataBase}
           setDataBase={setDataBase}
           dataBaseButtons={dataBaseButtons}
         />

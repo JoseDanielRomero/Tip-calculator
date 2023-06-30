@@ -39,11 +39,7 @@ function App() {
   const [tip, setTip] = useState('')
   const [customTipShown, setCustomTipShown] = useState('')
   const [resultTip, setResultTip] = useState('$0.00')
-  const [resultTotal, setResultTotal] = useState('')
-
-  // console.log( bill)
-  // console.log( tip)
-  // console.log( people)
+  const [resultTotal, setResultTotal] = useState('$0.00')
 
   return (
     <div className="App">
@@ -65,16 +61,21 @@ function App() {
             setDataBase={setDataBase}
             dataBaseButtons={dataBaseButtons}
             resultTip={resultTip}
-            setResultTip={setResultTip}
           />
           <Results
-            resultTip={resultTip}
-            setResultTip={setResultTip}
             bill={bill}
+            setBill={setBill}
             tip={tip}
+            setTip={setTip}
             people={people}
+            setPeople={setPeople}
+            resultTip={resultTip}
             resultTotal={resultTotal}
+            setCustomTipShown={setCustomTipShown}
             setResultTotal={setResultTotal}
+            dataBaseButtons={dataBaseButtons}
+            setDataBase={setDataBase}
+            setResultTip={setResultTip}
           />
         </article>
       </main>
