@@ -38,14 +38,12 @@ function App() {
   const [people, setPeople] = useState('')
   const [tip, setTip] = useState('')
   const [customTipShown, setCustomTipShown] = useState('')
+  const [resultTip, setResultTip] = useState('$0.00')
+  const [resultTotal, setResultTotal] = useState('')
 
-  if (typeof bill === 'number') {
-    console.log(bill.toFixed(2))
-  }
-
-  if (typeof people === 'number') {
-    console.log(people.toFixed())
-  }
+  // console.log( bill)
+  // console.log( tip)
+  // console.log( people)
 
   return (
     <div className="App">
@@ -66,8 +64,16 @@ function App() {
             dataBase={dataBase}
             setDataBase={setDataBase}
             dataBaseButtons={dataBaseButtons}
+            resultTip={resultTip}
+            setResultTip={setResultTip}
           />
-          <Results />
+          <Results
+            resultTip={resultTip}
+            setResultTip={setResultTip}
+            bill={bill}
+            tip={tip}
+            people={people}
+          />
         </article>
       </main>
     </div>

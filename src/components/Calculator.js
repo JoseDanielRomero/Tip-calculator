@@ -13,6 +13,9 @@ function Calculator({ setBill, bill, people, setPeople, tip, setTip, customTipSh
         setter={setBill}
         iconInput={dollarIcon}
         htmlType='number'
+        tip={tip}
+        bill={bill}
+        people={people}
       />
       <SelectTip 
         setTip={setTip}
@@ -28,6 +31,9 @@ function Calculator({ setBill, bill, people, setPeople, tip, setTip, customTipSh
         setter={setPeople}
         iconInput={peopleIcon}
         htmlType='tel'
+        tip={tip}
+        bill={bill}
+        people={people}
       /> 
     </section>
   );
