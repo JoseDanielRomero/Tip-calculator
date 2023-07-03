@@ -17,3 +17,20 @@
     row-gap: 10%;
 }
 
+@media screen and (max-width: 480px) {
+
+    .tip-container {
+        height: 50%;
+    }
+
+    .tip-list-container {
+        height: 85%;
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(2, 48%);
+        grid-template-rows: repeat(3, 29%);
+        row-gap: 6.5%;
+    }
+
+}

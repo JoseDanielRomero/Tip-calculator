@@ -6,3 +6,10 @@
     justify-content: space-between;
 }
 
+@media screen and (max-width: 480px) {
+
+    .calculator-box {
+        height: 65%;
+    }
+
+}

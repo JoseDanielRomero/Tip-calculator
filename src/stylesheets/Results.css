@@ -107,3 +107,17 @@
 .reset-button.off:active {
     background-color: hsl(183, 43%, 32%)
 }
+
+@media screen and (max-width: 480px) {
+
+    .result-box {
+        height: 35%;
+        padding: 7%;
+    }
+
+    .reset-button {
+        height: 80%;
+    }
+        
+
+}
