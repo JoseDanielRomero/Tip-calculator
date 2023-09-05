@@ -43,6 +43,14 @@ main {
   width: 50%;
 }
 
+@media screen and (max-width: 900px) {
+
+  .main-content-container {
+    width: 80%;
+  }
+
+}
+
 @media screen and (max-width: 480px) {
 
   .App {
